@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Form from "./Form";
+import Header from "./Header";
+import Result from "./Result";
+import './container.css';
+import { specifics } from "./specifics"
 
 function App() {
+
+  const inputAttributes = {
+    className: "form__field",
+    min: 0,
+    type: "number",
+  }
+
+  const [result, setResult] = useState("")
+
+
+
+  const showNorm = (result) => {
+    const comment = specifics.find(specific =>
+      (specific.BMI < result && result > 0 || specific.BMI > result && specific.BMIend < result || specific.BMI < result)
+    ).meaning
+    console.log(comment)
+  }
+
+  const calculateResult = (weight, height) => {
+    setResult(weight / (height * height) * 10000)
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+
+      <Form
+        inputAttributes={inputAttributes}
+        calculateResult={calculateResult}
+        result={result}
+        showNorm={showNorm}
+      />
+
+      <Result
+        result={result}
+      />
+
     </div>
   );
 }

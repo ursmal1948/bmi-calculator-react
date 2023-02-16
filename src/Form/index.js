@@ -1,8 +1,9 @@
 import "./style.css"
 import { useState } from "react"
 import { specifics } from "../specifics"
+import Input from "./Input"
 
-const Form = ({ inputAttributes, calculateResult, showNorm }) => {
+const Form = ({ calculateResult, showNorm }) => {
 
 
 
@@ -23,20 +24,18 @@ const Form = ({ inputAttributes, calculateResult, showNorm }) => {
             <fieldset className="form__fieldset">
                 <label className="form__label">
                     Waga w kg*:
-                    <input
+                    <Input
                         value={weight}
-                        onChange={(event) => setWeight(event.target.value)}
-                        {...inputAttributes}
-                        placeholder="Wpisz swoją wagę"
+                        onChangeFunction={(event) => setWeight(event.target.value)}
+                        title="Wpisz swoją wagę"
                     />
                 </label>
                 <label className="form__label">
                     Wzrost w cm*:
-                    <input
+                    <Input
                         value={height}
-                        onChange={(event) => setHeight(event.target.value)}
-                        {...inputAttributes}
-                        placeholder="Wpisz swój wzrost"
+                        onChangeFunction={(event) => setHeight(event.target.value)}
+                        title="Wpisz swój wzrost"
                     />
                 </label>
             </fieldset>

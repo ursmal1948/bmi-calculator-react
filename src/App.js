@@ -7,11 +7,7 @@ import { specifics } from "./specifics"
 
 function App() {
 
-  const inputAttributes = {
-    className: "form__field",
-    min: 0,
-    type: "number",
-  }
+
 
   const [result, setResult] = useState("")
 
@@ -40,7 +36,6 @@ function App() {
       <Header />
 
       <Form
-        inputAttributes={inputAttributes}
         calculateResult={calculateResult}
         result={result}
         showNorm={showNorm}

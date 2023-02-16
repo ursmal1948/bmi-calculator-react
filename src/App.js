@@ -15,13 +15,17 @@ function App() {
 
   const [result, setResult] = useState("")
 
+  // (specific.BMI > result && result > 0) || (specific.BMI > result && specific.BMIend < result) || (specific.BMI < result)).meaning
 
 
   const showNorm = (result) => {
-    const comment = specifics.find(specific =>
-      (specific.BMI < result && result > 0 || specific.BMI > result && specific.BMIend < result || specific.BMI < result)
-    ).meaning
-    console.log(comment)
+    const comment = specifics.find(specific => ((specific.BMI < result && result < specific.BMIend)
+      || (specific.BMI > result && specific.BMI > 0))).meaning
+
+    return (
+      console.log(comment)
+
+    )
   }
 
   const calculateResult = (weight, height) => {

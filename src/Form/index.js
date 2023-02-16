@@ -2,7 +2,7 @@ import "./style.css"
 import { useState } from "react"
 import { specifics } from "../specifics"
 
-const Form = ({ inputAttributes, calculateResult, showNorm, result }) => {
+const Form = ({ inputAttributes, calculateResult, showNorm }) => {
 
 
 
@@ -10,7 +10,7 @@ const Form = ({ inputAttributes, calculateResult, showNorm, result }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculateResult(weight, height);
-        showNorm(result)
+        showNorm()
 
     }
 

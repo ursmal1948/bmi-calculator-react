@@ -19,7 +19,7 @@ function App() {
 
   const [norm, setNorm] = useState("")
 
-  const showNorm = (result) => {
+  const showNorm = () => {
     const comment = specifics.find(specific => ((specific.BMI < result && result < specific.BMIend)
       || (specific.BMI > result && specific.BMI > 0))).meaning
 

@@ -23,17 +23,14 @@ function App() {
   return (
     <div className="container">
       <Header />
-
       <Form
         calculateResult={calculateResult}
         result={result}
         specifics={specifics}
       />
-
       <Result
         result={result} />
       Norma:{comment}
-
     </div>
   );
 }

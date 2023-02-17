@@ -7,29 +7,18 @@ import { specifics } from "./specifics"
 
 function App() {
 
-
-
   const [result, setResult] = useState("")
 
-  // (specific.BMI > result && result > 0) || (specific.BMI > result && specific.BMIend < result) || (specific.BMI < result)).meaning
+  const comment2 = result
+    ? specifics.find(specific =>
+    ((result >= specific.BMIstart && result <= specific.BMIend) ||
+      (result >= specific.BMIstart && specific.BMIend === ""))).meaning
 
-  const [norm, setNorm] = useState("")
-
-  const showNorm = () => {
-    const comment = specifics.find(specific => ((specific.BMI < result && result < specific.BMIend)
-      || (specific.BMI > result && specific.BMI > 0))).meaning
-
-    return (
-      console.log(comment)
-
-    )
-  }
+    : "N/A";
 
   const calculateResult = (weight, height) => {
     setResult(weight / (height * height) * 10000)
   }
-
-
 
   return (
     <div className="container">
@@ -38,12 +27,12 @@ function App() {
       <Form
         calculateResult={calculateResult}
         result={result}
-        showNorm={showNorm}
+        specifics={specifics}
       />
 
       <Result
-        result={result}
-      />
+        result={result} />
+      Norma:{comment2}
 
     </div>
   );

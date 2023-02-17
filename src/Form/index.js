@@ -3,20 +3,15 @@ import { useState } from "react"
 import { specifics } from "../specifics"
 import Input from "./Input"
 
-const Form = ({ calculateResult, showNorm }) => {
+const Form = ({ calculateResult,  }) => {
 
-
-
-
+    
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculateResult(weight, height);
-        showNorm()
-
     }
 
     const [weight, setWeight] = useState("")
-
     const [height, setHeight] = useState("")
 
     return (

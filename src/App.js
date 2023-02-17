@@ -9,10 +9,14 @@ function App() {
 
   const [result, setResult] = useState("")
 
-  const comment = result
-    ? specifics.find(specific =>
+  const getComment = () =>
+    specifics.find(specific =>
     ((result >= specific.BMIstart && result <= specific.BMIend) ||
       (result >= specific.BMIstart && specific.BMIend === ""))).meaning
+
+
+  const comment = result
+    ? getComment()
 
     : "N/A";
 

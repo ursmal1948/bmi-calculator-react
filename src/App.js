@@ -9,7 +9,7 @@ function App() {
 
   const [result, setResult] = useState("")
 
-  const comment2 = result
+  const comment = result
     ? specifics.find(specific =>
     ((result >= specific.BMIstart && result <= specific.BMIend) ||
       (result >= specific.BMIstart && specific.BMIend === ""))).meaning
@@ -32,7 +32,7 @@ function App() {
 
       <Result
         result={result} />
-      Norma:{comment2}
+      Norma:{comment}
 
     </div>
   );

@@ -8,6 +8,7 @@ const Input = ({ value, title, onChangeFunction }) => (
         min="0"
         type="number"
         required
+        step="any"
     />
 
 )

@@ -24,10 +24,9 @@
     margin-left: 50px;
     font-size: 20px;
     margin-bottom: 15px;
-    transition: 3s;
+    transition: 2s ;
 }
 
 .form__button:hover {
-    scale: 1.1;
-
+    scale: 1.15;
 }

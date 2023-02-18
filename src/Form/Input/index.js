@@ -7,7 +7,7 @@ const Input = ({ value, title, onChangeFunction }) => (
         placeholder={title}
         min="0"
         type="number"
-
+        required
     />
 
 )

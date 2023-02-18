@@ -1,8 +1,15 @@
-const Result = ({ result }) => (
-    <>
-    <h2>Wynik: {result}</h2>
-   
-    </>
+import "./style.css"
+
+const Result = ({ result, comment }) => (
+    !!result && (
+        <>
+            <header className="result">
+                <p>Wynik: {result.toFixed(2)}</p>
+                <p>{comment}</p>
+            </header>
+        </>
+    )
+
 
 );
 

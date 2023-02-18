@@ -1,0 +1,6 @@
+.result {
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+    font-size: 22px;
+}

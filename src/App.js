@@ -33,8 +33,9 @@ function App() {
         specifics={specifics}
       />
       <Result
-        result={result} />
-      Norma:{comment}
+        result={result}
+        comment={comment}
+        />
     </div>
   );
 }

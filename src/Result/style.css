@@ -4,3 +4,10 @@
     text-transform: capitalize;
     font-size: 22px;
 }
+
+@media ( max-width:767px) {
+    .result {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Form from "./Form";
 import Header from "./Header";
 import Result from "./Result";
-import './container.css';
 import { specifics } from "./specifics"
+import { Container } from "./Container"
 
 function App() {
 
@@ -14,10 +14,8 @@ function App() {
     ((result >= specific.BMIstart && result <= specific.BMIend) ||
       (result >= specific.BMIstart && specific.BMIend === ""))).meaning
 
-
   const comment = result
     ? getComment()
-
     : "N/A";
 
   const calculateResult = (weight, height) => {
@@ -25,7 +23,7 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <Container>
       <Header />
       <Form
         calculateResult={calculateResult}
@@ -35,9 +33,9 @@ function App() {
       <Result
         result={result}
         comment={comment}
-        />
-    </div>
+      />
+    </Container >
   );
-}
+};
 
 export default App;

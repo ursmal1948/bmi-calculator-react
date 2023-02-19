@@ -1,5 +1,4 @@
 const Input = ({ value, title, onChangeFunction }) => (
-
     <input
         className="form__field"
         value={value}
@@ -10,7 +9,6 @@ const Input = ({ value, title, onChangeFunction }) => (
         required
         step="any"
     />
-
-)
+);
 
 export default Input;

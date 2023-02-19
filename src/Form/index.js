@@ -1,15 +1,13 @@
 import "./style.css"
 import { useState } from "react"
-import { specifics } from "../specifics"
 import Input from "./Input"
 
 const Form = ({ calculateResult }) => {
 
-
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculateResult(weight, height);
-    }
+    };
 
     const [weight, setWeight] = useState("")
     const [height, setHeight] = useState("")
@@ -35,9 +33,7 @@ const Form = ({ calculateResult }) => {
             <button className="form__button">Policz swoje BMI</button>
         </form>
 
-    )
-}
-
-
+    );
+};
 
 export default Form;

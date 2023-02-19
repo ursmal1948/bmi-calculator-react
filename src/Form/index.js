@@ -4,13 +4,15 @@ import Input from "./Input"
 
 const Form = ({ calculateResult }) => {
 
+    const [weight, setWeight] = useState("")
+    const [height, setHeight] = useState("")
+
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculateResult(weight, height);
+        setWeight("");
+        setHeight("");
     };
-
-    const [weight, setWeight] = useState("")
-    const [height, setHeight] = useState("")
 
     return (
         <form onSubmit={onFormSubmit} className="form">

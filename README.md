@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Feel free to visit my [website](https://ursmal1948.github.io/bmi-calculator-react/)
 
 ## Descirption
-BMI Calculator allows  user to calculate body mass index, which is a person's weight in kilograms divided by the square of height in meters. Basically it is a measure which tells you if your weight is healthy. Having calculated the result, there pops a comment whether it is underweight, healthy weight overweight or obesity. It is my extra project created in React with the use of skills I am gaining within the course Frontend Developer at YouCode programming school. Go and check it yourself!
+BMI Calculator allows  user to calculate body mass index, which is a person's weight in kilograms divided by the square of height in meters. Basically it is a measure which tells you if your weight is healthy. Having calculated the result, there pops a comment whether it is underweight, healthy weight, overweight or obesity. It is my extra project created in React with the use of skills I am gaining within the course Frontend Developer at YouCode programming school. Go and check it yourself!
 
 <img src="https://github.com/ursmal1948/bmi-calculator-react/blob/main/public/animation__bmiCalculator.gif" width=550> 
 
